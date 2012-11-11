@@ -1,0 +1,57 @@
+<div class="container">
+
+	<div class="box">
+		<div id="header">
+			<h1>Daily Task</h1>
+		</div>
+		<div>
+
+			<form id="addTask" action="/" method="post">
+				<input id=​"taskInput" type="text" name="content" placeholder="Add a task...">​
+				<input class="btn btn-success task" type="submit" value="Add Task">
+			</form>
+		</div>
+		<div id="taskContainer" class=>
+			
+			<% if @tasks.size > 0 %>
+			<ul id="sortable">
+				<% @tasks.each do |task| %>
+
+				<% if task.complete %>
+				<li>
+					<a href="/<%= task.id %>/complete">
+						<i class="icon complete"></i>
+					</a>
+					<span class="complete">
+						<%= task.content %>
+					</span>
+					<form class="delete_form" action="/<%= task.id %>" method="post">  
+						<input type="hidden" name="_method" value="delete">  
+						<input type="submit" class="delete_button">  
+					</form> 
+				</li>
+				<% else %>
+				<li>
+					<a href="/<%= task.id %>/complete">
+						<i class="icon"></i>
+					</a>
+					<span>
+						<%= task.content %>
+					</span>
+					<form class="delete_form" action="/<%= task.id %>" method="post">  
+						<input type="hidden" name="_method" value="delete">  
+						<input type="submit" class="delete_button">  
+					</form> 
+				</li>
+				<% end %>
+				<% end %>
+			</ul>
+			<% else %>
+			<span class="grayText">You have no tasks listed.</span>
+			<% end %>
+
+		</div>
+
+	</div>
+
+</div>
