@@ -32,12 +32,11 @@ li {
 
 div.container {
 	position:relative;
-	width:940px;
+	width:580px;
 	margin: 0 auto;
 }
 
 div.box {
-	margin-left: 180px;
 	margin-top: 100px;
 	width: 520px;
 	padding: 30px 30px 15px 30px;
@@ -74,6 +73,19 @@ input[type="text"] {
 	color: #555;
 }
 
+input[type="text"].small_input {
+	width:390px;
+	display: inline-block;
+	margin: 0;
+	padding: 3px;
+	border: 1px solid #BBB;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0 1px 1px white;
+	font: 14px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+	text-shadow: 0 0 1px white;
+	color: #555;
+}
 .btn {
 	display: inline-block;
 	padding: 4px 12px;

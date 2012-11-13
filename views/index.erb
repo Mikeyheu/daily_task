@@ -22,9 +22,7 @@
 					<a href="/<%= task.id %>/complete">
 						<i class="icon complete"></i>
 					</a>
-					<span class="complete">
-						<%= task.content %>
-					</span>
+					<span class="complete editable"><%= task.content %></span>
 					<form class="delete_form" action="/<%= task.id %>" method="post">  
 						<input type="hidden" name="_method" value="delete">  
 						<input type="submit" class="delete_button">  
@@ -35,9 +33,7 @@
 					<a href="/<%= task.id %>/complete">
 						<i class="icon"></i>
 					</a>
-					<span>
-						<%= task.content %>
-					</span>
+					<span class="editable"><%= task.content %></span>
 					<form class="delete_form" action="/<%= task.id %>" method="post">  
 						<input type="hidden" name="_method" value="delete">  
 						<input type="submit" class="delete_button">  

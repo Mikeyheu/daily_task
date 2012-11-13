@@ -34,6 +34,12 @@ post '/' do # create
 	redirect '/'
 end
 
+post '/:id/update' do
+    t = Task.get(params[:id])
+    t.content = params[:content]
+    t.save
+end
+
 post '/sort' do
   params[:task].each_with_index do |task, index|
     t = Task.get(task.to_i)
